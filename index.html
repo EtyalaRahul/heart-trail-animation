@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Trail Animation</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <img src="https://media.tenor.com/nBQQ6XM5BhIAAAAj/cute.gif" alt="">
+        <img src="https://media.tenor.com/Ex1pkci_-v8AAAAj/white-cute-cat-hearts.gif" alt="">
+        <img src="https://media.tenor.com/nBQQ6XM5BhIAAAAj/cute.gif" alt="">
+        <img src="https://media.tenor.com/Ex1pkci_-v8AAAAj/white-cute-cat-hearts.gif" alt="">
+        <img src="https://media.tenor.com/nBQQ6XM5BhIAAAAj/cute.gif" alt="">
+        <img src="https://media.tenor.com/Ex1pkci_-v8AAAAj/white-cute-cat-hearts.gif" alt="">
+        <img src="https://media.tenor.com/nBQQ6XM5BhIAAAAj/cute.gif" alt="">
+        <img src="https://media.tenor.com/Ex1pkci_-v8AAAAj/white-cute-cat-hearts.gif" alt="">
+        <img src="https://media.tenor.com/nBQQ6XM5BhIAAAAj/cute.gif" alt="">
+        <img src="https://media.tenor.com/Ex1pkci_-v8AAAAj/white-cute-cat-hearts.gif" alt="">
+        <img src="https://media.tenor.com/nBQQ6XM5BhIAAAAj/cute.gif" alt="">
+        <img src="https://media.tenor.com/Ex1pkci_-v8AAAAj/white-cute-cat-hearts.gif" alt="">
+
+    </div>
+    <h1 class="container">Hii</h1>
+    <div class="container">
+
+        <img src="https://media.tenor.com/nBQQ6XM5BhIAAAAj/cute.gif" alt="">
+        <img src="https://media.tenor.com/Ex1pkci_-v8AAAAj/white-cute-cat-hearts.gif" alt="">
+        <img src="https://media.tenor.com/nBQQ6XM5BhIAAAAj/cute.gif" alt="">
+        <img src="https://media.tenor.com/Ex1pkci_-v8AAAAj/white-cute-cat-hearts.gif" alt="">
+        <img src="https://media.tenor.com/nBQQ6XM5BhIAAAAj/cute.gif" alt="">
+        <img src="https://media.tenor.com/Ex1pkci_-v8AAAAj/white-cute-cat-hearts.gif" alt="">
+        <img src="https://media.tenor.com/nBQQ6XM5BhIAAAAj/cute.gif" alt="">
+        <img src="https://media.tenor.com/Ex1pkci_-v8AAAAj/white-cute-cat-hearts.gif" alt="">
+        <img src="https://media.tenor.com/nBQQ6XM5BhIAAAAj/cute.gif" alt="">
+        <img src="https://media.tenor.com/Ex1pkci_-v8AAAAj/white-cute-cat-hearts.gif" alt="">
+        <img src="https://media.tenor.com/nBQQ6XM5BhIAAAAj/cute.gif" alt="">
+        <img src="https://media.tenor.com/Ex1pkci_-v8AAAAj/white-cute-cat-hearts.gif" alt="">
+
+    </div>
+    <script>
+        const bodyEl = document.querySelector("body");
+        const hidders = document.getElementsByClassName("container");
+        bodyEl.addEventListener("mousemove", (event) => {
+            for (let i = 0; i < hidders.length; i++) {
+                hidders[i].style.display = "none";
+            }
+
+            const xPos = event.clientX;
+            const yPos = event.clientY;
+
+            const spanEl = document.createElement("span");
+            spanEl.style.left = xPos + "px";
+            spanEl.style.top = yPos + "px";
+
+            const size = Math.random() * 150;
+            spanEl.style.width = size + "px";
+            spanEl.style.height = size + "px";
+
+            const images = ['2.png', '2.png', '2.png'];
+            const randomImage = images[Math.floor(Math.random() * images.length)];
+            spanEl.style.backgroundImage = `url(${randomImage})`;
+
+            bodyEl.appendChild(spanEl);
+
+            setTimeout(() => {
+                spanEl.remove();
+            }, 600);
+        });
+
+    </script>
+</body>
+
+</html>
